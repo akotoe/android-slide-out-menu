@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="1"
+    android:background="@drawable/blue_bg">
+
+    <!-- Menu Panel -->
+    <RelativeLayout
+           android:id="@+id/menuPanel"
+           android:layout_height="match_parent"
+           android:layout_width="wrap_content"
+           android:gravity="right"
+           android:background="@drawable/gray_bg"
+           android:orientation="vertical" >
+       
+            <TextView
+                android:id="@+id/menu_title_1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="0dp" 
+                android:paddingLeft="15dp"             
+                android:gravity="center_vertical"
+                android:background="#353535"
+                android:textColor="@android:color/white"
+                android:text="@string/menu_title">     
+            </TextView>
+               
+            <View
+		        android:id="@+id/menu_item_divider_1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="0dp"
+		        android:layout_marginRight="0dp"
+		        android:layout_below="@+id/menu_title_1"
+		        android:background="#b5b5b5"/>
+            
+            <TextView
+                android:id="@+id/menu_item_1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"             
+                android:gravity="center_vertical"
+                android:layout_below="@+id/menu_item_divider_1"
+                android:text="@string/item_1">     
+            </TextView>     
+             <View
+		        android:id="@+id/menu_item_divider_2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_below="@+id/menu_item_1"
+		        android:background="#b5b5b5"/> 
+            <TextView
+                android:id="@+id/menu_item_2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/menu_item_divider_2"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/item_2">
+            </TextView>
+            <View
+		        android:id="@+id/menu_item_divider_3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_below="@+id/menu_item_2"
+		        android:background="#b5b5b5" />           
+            </RelativeLayout>
+            
+       <!-- Sliding Panel -->     
+		<LinearLayout
+                android:id="@+id/slidingPanel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:background="@android:color/white" >
+        
+        		<RelativeLayout
+		            android:id="@+id/header"
+		            android:layout_width="match_parent"
+		            android:layout_height="50dp"
+		            android:background="@drawable/blue_bg" >
+
+		          	<View
+		                android:id="@+id/header_vertical_divider_1"
+		                android:layout_width="2dp"
+		                android:layout_height="fill_parent"
+		                android:layout_alignParentTop="true"
+		                android:layout_marginLeft="15dp"
+		                android:layout_toRightOf="@+id/menuViewButton"
+		                android:background="@drawable/engraved_bg" />
+  
+			            <ImageView
+			                android:id="@+id/menuViewButton"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_alignParentLeft="true"
+			                android:layout_centerVertical="true"
+			                android:layout_marginLeft="15dp"
+			                android:clickable="true"
+			                android:contentDescription="@string/description"
+			                android:src="@drawable/icon_menu"
+			                android:visibility="visible" />
+  				</RelativeLayout>
+
+        		<View
+				     android:id="@+id/dividerHeaderBottom"
+				     android:layout_width="fill_parent"
+				     android:layout_height="1dp"
+				     android:background="#414141" />
+		        <ListView
+		            android:id="@+id/list"
+		            android:layout_width="match_parent"
+		            android:layout_height="fill_parent"
+		            android:divider="#b5b5b5"
+		            android:dividerHeight="0.5dp"
+		            android:background="@android:color/white"
+		             >
+		        </ListView>
+
+		</LinearLayout>
+</FrameLayout>
